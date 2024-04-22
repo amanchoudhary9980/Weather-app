@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+.App{
+    display: flex;
+    flex-direction: row;
+    background-color: #E8E8E8;
+    height: 100vh;
+}
+.weather-main{
+    width: 500px;
+    background-image: url(./Resources/rain-4194.gif);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    text-align: center;
+}
+.overlay{
+    height: 100%;
+    width: 491px;
+    background-color: rgba(0, 0, 0, 0.493);
+    position: absolute;
+}
+.search > form {
+    display: flex;
+    padding-right: 25px;
+}
+.search{
+    width: 75%;
+    position: relative;
+    top: -40px;
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.233) 5px 5px 19px;
+}
+.search input{
+    border: none;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    border-radius: 999px;
+}
+.search input:focus{
+    outline: none;
+}
+
+.weather-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.weather-icon{
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 16px;
+}
+.weather-temp{
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+}
+.weather-type{
+    text-align: center;
+    font-size: 2rem;
+}
+.weather-time{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+.weather-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.weather-location{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.weather-location > p{
+    font-size: 14px;
+}
+.weather-details{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 5rem;
+    align-items: center;
+}
+.weather-details > nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.weather-details > nav > ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* gap: 45px; */
+}
+.weather-details > nav > ul > li{
+    list-style: none;
+    padding: 10px;
+    /* border-radius: 12px; */
+}
+.weather-details > nav > ul > li > a{
+    text-decoration: none;
+    color: #969696;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+#active{
+    color: black;
+}
+.weather-details-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    gap: 2rem 5rem;
+}
+.weather-details-grid > *{
+    height: 8rem;
+    padding: 1rem;
+    background-image: linear-gradient(#7e95f3, #748CF1);
+    border-radius: 16px;
+    color: white;
+}
+.data-info{
+    width: 100%;
+    text-align: left;
+}
+.data-info > a{
+    text-decoration: none;
+    color: #748CF1;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+footer > a > img{
+    width: 40px;
+}
+.forecast-data{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.forecast-data-container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.253) 2px 2px 19px 0px;
+}
+.active{
+    color: #748CF1 !important; 
+}
+.button{
+    background: none;
+    border: none;
+}
+.spinner{
+    width: fit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1350px){
+.App{
+    height: inherit;
+}
+.weather-details{
+    width: 50%;
+    gap: 30px;
+}
+.weather-details-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+}
+.weather-details > nav {
+    overflow-x: scroll;
+    width: 600px;
+}
+.weather-details > nav > ul > li{
+    text-align: center;
+}
+
+.weather-details nav > ul > li > a {
+    font-size: 1.3em;
+    width: 120px;
+    display: block;
+}
+}
+@media screen and (max-width: 950px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+    }
+    .weather-main{
+        width: 100%;
+        height: 100vh;
+    }
+    .weather-details{
+        width: max-content;
+        padding: 0;
+    }
+    .weather-details > nav {
+        width: 100vw;
+
+    }
+    .weather-details > nav > ul > li {
+        width: fit-content;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 12px;
+    }
+    .data-info{
+        text-align: center;
+    }
+    .forecast-data{
+        font-size: 28px;
+    }
+}
