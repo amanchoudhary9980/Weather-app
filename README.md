@@ -2,13 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## The functionalities 
+
+View current weather data & forecast data for 7 days, at current location by default and custom location.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-## The functionalities 
-
-View current weather data & forecast data for 7 days, at current location by default and custom location.
 
 ### `npm start`
 
