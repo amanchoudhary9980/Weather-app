@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## The functionalities 
+
+View current weather data & forecast data for 7 days, at current location by default and custom location.
+
 ### `npm start`
 
 Runs the app in the development mode.\
