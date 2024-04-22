@@ -1,7 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## The functionalities 
 
 View current weather data & forecast data for 7 days, at current location by default and custom location.
