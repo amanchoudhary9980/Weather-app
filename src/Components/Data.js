@@ -58,7 +58,7 @@ const Data = () => {
 
   const fetchWeatherData = async (latitude, longitude) => {
     try {
-      const apiKey = "47e12ffc739f91cc0f184d94f100dd86";
+      const apiKey = process.env.REACT_APP_OWM_API_KEY;
       const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
@@ -82,7 +82,7 @@ const Data = () => {
     if (city.trim() !== "") {
       setLoading(true);
       try {
-        const apiKey = "47e12ffc739f91cc0f184d94f100dd86";
+        const apiKey = process.env.REACT_APP_OWM_API_KEY;
         const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
